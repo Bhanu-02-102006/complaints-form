@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Issue Form | Resolution Center</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <form id="complaintForm" class="issue-card" enctype="multipart/form-data">
+            <header class="form-header">
+                <span class="emoji-icon">🎓</span>
+                <h1>Student Issue Form</h1>
+            </header>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="rollNo">Roll No:</label>
+                <input type="text" id="rollNo" name="rollNo" placeholder="Enter roll number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="issueType">Issue Type:</label>
+                <select id="issueType" name="issueType" required>
+                    <option value="Energy Misuse">Energy Misuse</option>
+                    <option value="Maintenance">Maintenance</option>
+                    <option value="Safety">Safety</option>
+                    <option value="Cleanliness">Cleanliness</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Describe your issue" rows="4"
+                    required></textarea>
+            </div>
+
+            <div class="form-group file-upload">
+                <label for="photo">Upload Photo:</label>
+                <div class="custom-file-input">
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                    <span id="file-name" class="placeholder-text">No file chosen</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location (Nearby):</label>
+                <input type="text" id="location" name="location" placeholder="Enter nearby location" required>
+            </div>
+
+            <button type="submit" id="submitBtn">
+                <span class="btn-emoji">🚀</span> Submit
+            </button>
+        </form>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
