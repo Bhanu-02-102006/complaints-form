@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(form);
             
             // Backend endpoint (we'll set this up next)
-            const response = await fetch('http://localhost:3000/api/complaints', {
+            const response = await fetch('https://complaints-form-bh26.onrender.com/api/complaints', {
                 method: 'POST',
                 body: formData
             });
